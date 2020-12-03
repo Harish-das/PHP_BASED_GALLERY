@@ -56,7 +56,7 @@ if(isset($_POST['button1'])) {
       printf("<img src='cars/%s' onclick='gallery.show(this)'/>", basename($i));
     }
 } 
-if(isset($_POST['button2'])) { 
+elseif(isset($_POST['button2'])) { 
   $dir = __DIR__ . DIRECTORY_SEPARATOR . "person" . DIRECTORY_SEPARATOR;
     $images = glob($dir . "*.{jpg,jpeg,gif,png,bmp,webp}", GLOB_BRACE);
     shuffle($images);
@@ -64,7 +64,7 @@ if(isset($_POST['button2'])) {
       printf("<img src='person/%s' onclick='person.show(this)'/>", basename($i));
     }
 } 
-if(isset($_POST['button3'])) { 
+elseif(isset($_POST['button3'])) { 
   $dir = __DIR__ . DIRECTORY_SEPARATOR . "movies" . DIRECTORY_SEPARATOR;
     $images = glob($dir . "*.{jpg,jpeg,gif,png,bmp,webp}", GLOB_BRACE);
     shuffle($images);
